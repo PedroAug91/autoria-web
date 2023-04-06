@@ -1,0 +1,11 @@
+body {
+    background-color: #2b2b2b;
+}
+p {
+    text-indent: 4ch;
+}
+
+#movie-div img{
+    widht: 430px;
+    height: 430px;
+}
