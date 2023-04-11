@@ -1,0 +1,26 @@
+p {
+    text-indent: 4ch;
+}
+
+#movie-title {
+    text-align: center;
+    background-color: gray;
+    padding: 20px 18px 20px 18px;
+}
+
+#movie-info img {
+    height: 430px;
+    widht: 200px;
+    border-radius: 10px
+}
+
+#movie-info {
+    padding: 10px 30px 10px 30px;
+    background-color: gray;
+    display; grid;
+    column-count: 2;
+}
+
+#movie-info h4, p{
+    position: relative;
+}
