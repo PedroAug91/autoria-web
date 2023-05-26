@@ -1,0 +1,28 @@
+main {
+    width: 300px;
+}
+
+img {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+
+.stories {
+    border: lime solid 2px;
+}
+
+#foto-usuario {
+    border: gray solid 2px;
+}
+
+.post {
+    border-radius: 0%;
+    height: ;
+    width: auto;
+}
+main {
+
+}
