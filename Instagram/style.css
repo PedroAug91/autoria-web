@@ -1,0 +1,38 @@
+@font-face {
+    font-family: Grandista;
+    src: url('assets/fonts/Grandista.ttf');
+}
+
+@font-face {
+    font-family: ExpressWay;
+    src: url(assets/fonts/expressway-rg.otf);
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#top-bar {
+    height: 37px;
+    width: 429px;
+
+    margin: ;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+}
+
+
+
+.round {
+    border-radius: 50%;
+}
+
+
+.bottom-nav {
+    position: sticky;
+    bottom: 0;
+}
