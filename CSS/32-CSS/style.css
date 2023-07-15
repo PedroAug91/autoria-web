@@ -1,8 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+:root {
+    --color-primary: black;
+    --color-secondary: seashell;
+}
+
+body,
+main,
+header,
+.card,
+.cards-container,
+.hero,
+.hero-heading,
+.locations,
+.gallery-container {
+    display: flex;
+    align-items: center;
+}
+
+body,
+main,
+.hero-heading,
+.gallery-heading,
+.locations,
+.card {
+    flex-direction: column;
+}
+
 body {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
     font-family: Helvetica;
     font-size: 22px;
-    color: seashell;
-    background-color: black;
     opacity: 0.9;
     text-align: center;
+}
+
+
+section {
+    margin-top: 69px;
+    max-width: 1200px;
+}
+
+main {
+    width: 1200px;
+}
+
+@media only screen and (max-width: 1200px){
+    main {
+        width: 100%;
+    }
+}
+
+header {
+    background-color: var(--color-primary);
+    border-bottom: 1px solid var(--color-secondary);
+    height: 69px;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.logo {
+    display: inline;
+    margin-left: 10px;
+    height: 50px;
+    width: auto;
+}
+
+.action-buttons a, a:visited {
+    color: gray;
+    text-decoration: underline;
+}
+
+.hero {
+    background-image: url('resources/img-mission-background.webp');
+    background-size: cover;
+    height: 700px;
+    inset: 0;
+    justify-content: center;
+    width: 100%;
+}
+
+.hero-heading {
+    background-color: var(--color-primary);
+    justify-content: space-evenly;
+    height: 100px;
+    width: 100%;
+}
+
+.tea-of-the-month {
+    max-width: 1000px;
+}
+
+.gallery-container {
+    flex-wrap: wrap;
+    heigth: auto;
+    justify-content: space-around;
+    align-items: space-between;
+}
+
+.gallery-heading {
+    display: flex;
+    justify-content: space-evenly;
+    height: 120px;
+}
+
+.gallery-item {
+    margin-bottom: 45px;
+}
+
+.gallery-item, .gallery-image{
+    height: 200px;
+    width: 300px;
+}
+
+.gallery-item figcaption {
+    position: relative;
+    top: 2px;
+}
+
+.locations {
+    background-image: url("resources/img-locations-background.jpg");
+    height: 580px;
+    width: 100%;
+    flex-direction: column;
+}
+
+.locations-heading {
+}
+
+.cards-container{
+    flex-wrap: wrap;
+}
+
+.card {
+    height: 300px;
+    width: 300px;
+    background-color: var(--color-primary);
+    opacity: 1;
+    justify-content: space-evenly;
+    margin-inline: 20px;
+    position: relative;
+    top: 290px;
 }
