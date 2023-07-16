@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 69px;
+}
+
 
 :root {
     --color-primary: black;
@@ -14,6 +19,7 @@ main,
 header,
 .card,
 .cards-container,
+.contact,
 .hero,
 .hero-heading,
 .locations,
@@ -24,10 +30,11 @@ header,
 
 body,
 main,
+.card ,
+.contact,
 .hero-heading,
 .gallery-heading,
-.locations,
-.card {
+.locations {
     flex-direction: column;
 }
 
@@ -54,6 +61,22 @@ main {
     main {
         width: 100%;
     }
+    .action-buttons a{
+        font-size: 19px;
+    }
+    .card {
+        margin-inline: 0 !important;
+    }
+    div.hero-heading {
+        min-height: 100px;
+        height: auto;
+    }
+    div.hero-heading h2{
+        padding-top: 8px;
+    }
+    div.hero-heading h4{
+        padding-bottom: 8px;
+    }
 }
 
 header {
@@ -64,6 +87,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 5;
 }
 
 .logo {
@@ -73,9 +97,12 @@ header {
     width: auto;
 }
 
+
 .action-buttons a, a:visited {
     color: gray;
     text-decoration: underline;
+    margin-inline: 10px;
+    flex-shrink: 1;
 }
 
 .hero {
@@ -94,14 +121,14 @@ header {
     width: 100%;
 }
 
-.tea-of-the-month {
+.featured-tea {
     max-width: 1000px;
 }
 
 .gallery-container {
     flex-wrap: wrap;
     heigth: auto;
-    justify-content: space-around;
+    justify-content: center;
     align-items: space-between;
 }
 
@@ -112,6 +139,7 @@ header {
 }
 
 .gallery-item {
+    margin-inline: 15px;
     margin-bottom: 45px;
 }
 
@@ -127,16 +155,21 @@ header {
 
 .locations {
     background-image: url("resources/img-locations-background.jpg");
-    height: 580px;
+    background-size: cover;
+    background-repeat: norepeat;
+    min-height: 580px;
     width: 100%;
     flex-direction: column;
 }
 
 .locations-heading {
+    margin-top: 90px;
+    margin-bottom: 15px
 }
 
 .cards-container{
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .card {
@@ -145,7 +178,24 @@ header {
     background-color: var(--color-primary);
     opacity: 1;
     justify-content: space-evenly;
-    margin-inline: 20px;
-    position: relative;
-    top: 290px;
+    margin: 0 20px 30px;
+}
+
+.first-card {
+    margin-left: 0;
+}
+
+.last-card {
+    margin-right: 0;
+}
+
+.contact {
+    margin-top: 0;
+    height: 200px;
+    justify-content: space-around;
+}
+
+.copyright {
+    position: absolute;
+    left: 20px;
 }
