@@ -19,6 +19,10 @@
     --white: #fdffff;
     --blue: #010081;
     --black: #000000;
+    --header-height: 70px;
+    --hero-height: 900px;
+    --p-font-size: 20px;
+    --card-width: 400px;
 }
 
 * {
@@ -40,10 +44,10 @@ body {
 header {
     position: sticky;
     top: 0;
-    height: 70px;
+    height: var(--header-height);
     display: flex;
     align-items: center;
-    background-color: var(--background-color);
+    z-index: 2;
 }
 
 footer {
@@ -59,6 +63,12 @@ a {
     color: inherit;
 }
 
+
+/* HEADER STYLING */
+
+#top-bar {
+    display: flex;
+}
 
 .icon-container {
     display: flex;
@@ -77,10 +87,20 @@ a {
     margin: 0;
 }
 
+#navbar-background {
+    height: var(--header-height);
+    background-color: var(--background-color);
+    position: sticky;
+    top: 0;
+    margin-top: var(--hero-height);
+}
+
+/* MAIN STYLING */
+
 #hero {
     background-image: url("assets/images/hero.jpg");
     background-size: cover;
-    height: 900px;
+    height: var(--hero-height);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -88,23 +108,28 @@ a {
     font-family: FGCondensed;
     flex-direction: column;
     color: var(--black);
+    position: absolute;
+    width: 100%;
+    top: 0;
 }
 
 .hero-heading {
     display: flex;
     flex-direction: column;
-    justify-content: baselinekkk;
 }
 
 #regular {
     font-family: FGLight;
     font-weight: 200;
+    margin-bottom: -60px;
 }
 
 #winLogo {
     height: 300px;
     width: auto;
 }
+
+/* SECTIONS STYLING */
 
 .window {
     border: outset;
@@ -138,15 +163,68 @@ a {
     margin-inline: 1px;
 }
 
-#top-bar {
+.outset-border {
+    border: outset var(--black);
+}
+
+/* SOBREMIM STYLING */
+
+.window-content {
     display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.window-content figure {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    flex-direction: column;
+}
+
+.window-content img {
+    height: 300px;
+    object-fit: cover;
+}
+
+article p{
+    margin: 30px 50px;
+    max-width: 500px;
+    font-size: var(--p-font-size);
+    text-indent: 50px;
 }
 
 #selfie-img {
-    height: 300px;
+    height: 400px;
     width: auto;
-    border: outset var(--black);
 }
+
+/* CURIOSIDADES STYLING */
+
+#curiosidades {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: var(--card-width);
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-figure {
+    margin: 0 !important;
+}
+
+.card-figure img {
+    max-width: calc(var(--card-width) - 30px);
+}
+
+/* FOOTER STYLING*/
 
 #start-menu {
     border: outset;
