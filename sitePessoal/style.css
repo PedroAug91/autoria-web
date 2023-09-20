@@ -261,6 +261,7 @@ article p{
 
 .card-figure figcaption {
     margin-block: 15px;
+    text-align: center;
 }
 
 /* EDUCACAO STYLING */
