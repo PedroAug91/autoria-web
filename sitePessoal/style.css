@@ -80,6 +80,7 @@ a {
     display: flex;
     flex-direction: column;
     margin-inline: 15px;
+    align-items: center;
 }
 
 .icon {
@@ -187,6 +188,16 @@ a {
     border: outset var(--black);
 }
 
+.menu-bar {
+    min-height: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-bar span{
+    margin: 4px 10px 1px;
+}
+
 /* SOBREMIM STYLING */
 
 #sobremim {
@@ -254,6 +265,40 @@ article p{
 
 /* EDUCACAO STYLING */
 
+.num {
+    min-width: 30px;
+    text-align: center;
+    width: 40px;
+}
+
+.letters {
+    min-width: 70px;
+}
+
+th, td{
+    border: 1px solid var(--light-gray);
+    min-width: 30px;
+    text-align: center;
+    background-color: var(--white);
+    border-spacing: 0;
+}
+
+.num, .letters {
+    border: outset var(--white);
+    background-color: var(--light-gray);
+    height: 40px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.num {
+    width: 50px;
+}
+
+td {
+    font-size: 20px;
+    padding-inline: 20px;
+}
 
 /*CAUSOS STYLING*/
 
@@ -263,19 +308,23 @@ article p{
 
 #causos .window-content {
     justify-content: center;
+    background-color: var(--white);
+    border: inset ;
+    margin: 4px;
 }
+
 
 /* HABILIDADES */
 
 #habilidades {
-    height: 500px;
+    min-height: 500px;
 }
 
 #habilidades .window-content{
-    border: outset 2px var(--black);
+    border: inset 2px var(--black);
     background-color: var(--white);
     margin: 4px;
-    height: 92%;
+    min-height: 440px;
     align-items: flex-start;
     justify-content: flex-start;
 }
@@ -435,6 +484,12 @@ article p{
         font-size: 44px;
     }
 
+    /* EDUCACAO */
+
+    td {
+        font-size: 30px;
+    }
+
     /* CAUSOS */
 
     #causos p {
@@ -442,6 +497,9 @@ article p{
         font-size: 30px;
     }
 
+    #causos .window-content {
+        margin: 4px;
+    }
 
     /* HABILIDADES */
 
