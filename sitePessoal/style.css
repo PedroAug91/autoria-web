@@ -37,8 +37,8 @@ html {
 
 body {
     background-color: var(--background-color);
-    color: var(--white);
     font-family: W95FA;
+    color: var(--black);
 }
 
 header {
@@ -47,7 +47,13 @@ header {
     height: var(--header-height);
     display: flex;
     align-items: center;
-    z-index: 2;
+    z-index: 3;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 footer {
@@ -85,15 +91,20 @@ a {
 .icon-container span {
     padding-top: 4px;
     margin: 0;
+    color: var(--white);
+    text-align: center;
 }
 
 #navbar-background {
-    height: var(--header-height);
+    min-height: var(--header-height);
+    min-width: 100%;
     background-color: var(--background-color);
     position: sticky;
     top: 0;
     margin-top: var(--hero-height);
+    z-index: 2;
 }
+
 
 /* MAIN STYLING */
 
@@ -134,10 +145,12 @@ a {
 .window {
     border: outset;
     background-color: var(--light-gray);
-    margin: 40px 130px;
+    min-width: 400px;
+    margin-block: 50px;
 }
 
 .window-heading {
+    color: var(--white);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -163,12 +176,6 @@ a {
     margin-inline: 1px;
 }
 
-.outset-border {
-    border: outset var(--black);
-}
-
-/* SOBREMIM STYLING */
-
 .window-content {
     display: flex;
     flex-wrap: nowrap;
@@ -176,16 +183,23 @@ a {
     align-items: center;
 }
 
-.window-content figure {
+.outset-border {
+    border: outset var(--black);
+}
+
+/* SOBREMIM STYLING */
+
+#sobremim {
+    min-width: 600px;
+    max-width: 900px;
+    flex-wrap: wrap;
+}
+
+#sobremim figure {
     display: flex;
     align-items: center;
     margin-left: 50px;
     flex-direction: column;
-}
-
-.window-content img {
-    height: 300px;
-    object-fit: cover;
 }
 
 article p{
@@ -211,17 +225,67 @@ article p{
 
 .card {
     width: var(--card-width);
-    height: 500px;
+    height: auto;
     display: flex;
     flex-direction: column;
+    margin: 20px;
+}
+
+.card .outset-border {
+    width: 380px;
+}
+
+.card .window-content {
+    margin: 14px 14px 0;
+    justify-content: center;
 }
 
 .card-figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0 !important;
+    font-size: 18px;
 }
 
-.card-figure img {
-    max-width: calc(var(--card-width) - 30px);
+.card-figure figcaption {
+    margin-block: 15px;
+}
+
+/* EDUCACAO STYLING */
+
+
+/*CAUSOS STYLING*/
+
+#causos {
+    min-width: 600px;
+}
+
+#causos .window-content {
+    justify-content: center;
+}
+
+/* HABILIDADES */
+
+#habilidades {
+    height: 500px;
+}
+
+#habilidades .window-content{
+    border: outset 2px var(--black);
+    background-color: var(--white);
+    margin: 4px;
+    height: 92%;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#habilidades .window-content span {
+    color: var(--black);
+}
+
+#habilidades .window-content .icon-container {
+    margin-top: 10px;
 }
 
 /* FOOTER STYLING*/
@@ -258,4 +322,152 @@ article p{
 
 #contato i {
     margin-right: 5px;
+}
+
+@media screen and (max-width: 980px){
+    /* TAGS */
+    html {
+        scroll-padding-top: 170px;
+    }
+    /* HEADER */
+    header, #navbar-background {
+        height: 170px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #top-bar {
+        margin-top: 20px;
+    }
+
+    .icon-container {
+        margin-inline: 30px;
+        font-size: 24px;
+    }
+    .icon {
+        height: 80px;
+    }
+
+    #navbar-background {
+        margin-top: 1700px;
+    }
+
+    /* HERO */
+
+    #hero {
+        height: 1700px;
+        font-size: 120px;
+    }
+
+    #winLogo {
+        height: 530px;
+    }
+
+    /* SECTIONS */
+
+    .window {
+        border: outset 4px;
+        margin-inline: 20px;
+    }    
+
+    .window-heading {
+        height: 50px;
+    }
+
+    .window-heading h2 {
+        font-size: 30px;
+    }
+
+    .window-icons {
+        margin-right: 10px;
+    }
+
+    .window-icon {
+        height: 24px;
+        margin-inline: 5px;
+        border: outset 4px;
+    }
+
+    .outset-border {
+        border: outset 4px var(--black);
+    }
+
+    .window-content {
+        margin-block: 30px;
+    }
+
+    /* SOBREMIM */
+
+    #sobremim {
+        margin-inline: 30px;
+        height: auto;
+    }
+
+    #sobremim p {
+        margin-block: 20px;
+        font-size: 30px;
+    }
+
+    #selfie-img {
+        height: 600px;
+    }
+
+    /* CURIOSIDADES */
+
+    .card {
+        width: 750px;
+        height: auto;
+    }
+
+    .card-figure {
+        width: 100%;
+    }
+
+    .card-figure img {
+        min-width: 700px;
+        height: 500px;
+        object-fit: cover;
+    }
+
+    .card-figure figcaption {
+        margin: 30px 20px 45px;
+        text-align: center;
+        font-size: 44px;
+    }
+
+    /* CAUSOS */
+
+    #causos p {
+        margin: 10px 0;
+        font-size: 30px;
+    }
+
+
+    /* HABILIDADES */
+
+    #habilidades {
+        margin-inline: 30px;
+    }
+
+    #habilidades .window-content {
+        height: 86%;
+    }
+
+    /* FOOTER */
+
+    footer {
+        height: 170px;
+        justify-content: space-around;
+        font-size: 24px;
+    }
+
+    #start-menu {
+        height: 70px;
+        margin-inline: 0;
+    }
+
+    #menu-a img{
+        height: 70px;
+        width: auto;
+    }
 }
